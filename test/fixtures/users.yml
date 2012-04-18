@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  email: MyString
-  oauth_token: MyString
-  oauth_token_secret: MyString
+  name: Zacarias
+  email: zacarias@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
 
 two:
-  name: MyString
-  email: MyString
-  oauth_token: MyString
-  oauth_token_secret: MyString
+  name: Edvaldo
+  email: edvaldo@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
