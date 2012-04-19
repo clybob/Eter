@@ -1,6 +1,6 @@
 class ObjectsController < ApplicationController
     respond_to :html, :json
-    
+
     def get_class
         User
     end

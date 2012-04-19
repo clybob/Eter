@@ -1,0 +1,23 @@
+<h1>Listing premios</h1>
+
+<table>
+  <tr>
+    <th>Award</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @premios.each do |premio| %>
+  <tr>
+    <td><%= premio.award %></td>
+    <td><%= link_to 'Show', premio %></td>
+    <td><%= link_to 'Edit', edit_premio_path(premio) %></td>
+    <td><%= link_to 'Destroy', premio, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Premio', new_premio_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@premio) do |f| %>
+  <% if @premio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@premio.errors.count, "error") %> prohibited this premio from being saved:</h2>
+
+      <ul>
+      <% @premio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :award %><br />
+    <%= f.text_field :award %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

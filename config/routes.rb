@@ -1,4 +1,6 @@
 Eter::Application.routes.draw do
+  resources :awards
+
   resources :editorials
 
   resources :users
