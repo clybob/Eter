@@ -1,4 +1,6 @@
 Eter::Application.routes.draw do
+  resources :editorials
+
   resources :users
 
   # The priority is based upon order of creation:
