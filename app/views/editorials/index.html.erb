@@ -1,0 +1,23 @@
+<h1>Listing editorials</h1>
+
+<table>
+  <tr>
+    <th>Uri</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @editorials.each do |editorial| %>
+  <tr>
+    <td><%= editorial.uri %></td>
+    <td><%= link_to 'Show', editorial %></td>
+    <td><%= link_to 'Edit', edit_editorial_path(editorial) %></td>
+    <td><%= link_to 'Destroy', editorial, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Editorial', new_editorial_path %>
