@@ -10,26 +10,32 @@ class ObjectsController < ApplicationController
         name.to_sym
     end
 
-    def get_objects_indentifier
-        name = get_object_identifier
+    def get_objects_identifier
+        name = get_object_identifier.to_s
         name = name.pluralize
         name.to_sym
     end
-
+    def set_variable_collection
+        variable = ("@" + get_objects_identifier.to_s).to_sym
+        instance_variable_set variable, @objects
+    end
+    def set_variable
+        variable = ("@" + get_object_identifier.to_s).to_sym
+        instance_variable_set variable, @object
+    end
     # GET /objects
     # GET /objects.json
     def index
         @objects = get_class.all
-        variable = ("@" + get_object_identifier.to_s).to_sym
-        self.instance_variable_set(variable, @objects)
-        puts @editorials
-        respond_with @editorials
+        set_variable_collection
+        respond_with @objects
     end
 
       # GET /objects/1
       # GET /objects/1.json
     def show
         @object = get_class.find(params[:id])
+        set_variable
         respond_with @object
     end
 
@@ -37,11 +43,13 @@ class ObjectsController < ApplicationController
     # GET /objects/new.json
     def new
         @object = get_class.new
+        set_variable
     end
 
     # GET /objects/1/edit
     def edit
         @object = get_class.find(params[:id])
+        set_variable
         respond_with @object
     end
 
@@ -49,6 +57,7 @@ class ObjectsController < ApplicationController
     # POST /objects.json
     def create
         @object = get_class.new(params[get_object_identifier])
+        set_variable
         @object.save
         respond_with @object
     end
@@ -57,6 +66,7 @@ class ObjectsController < ApplicationController
     # PUT /objects/1.json
     def update
         @object = get_class.find(params[:id])
+        set_variable
         if @object.update_attributes(params[get_object_identifier])
             respond_with @object
         else
@@ -69,6 +79,6 @@ class ObjectsController < ApplicationController
     def destroy
         @object = get_class.find(params[:id])
         @object.destroy
-        redirect_to get_objects_indentifier
+        redirect_to get_objects_identifier
     end
 end
