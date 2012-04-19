@@ -1,5 +1,5 @@
 class UsersController < ObjectsController
-    def get_class
-        User
-    end
+  def get_class
+    User
+  end
 end

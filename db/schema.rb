@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419230317) do
+ActiveRecord::Schema.define(:version => 20120419234354) do
 
   create_table "awards", :force => true do |t|
     t.string   "name"
@@ -27,11 +27,15 @@ ActiveRecord::Schema.define(:version => 20120419230317) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "premios", :force => true do |t|
-    t.string   "award"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.integer  "points"
+    t.integer  "editorial_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
+
+  add_index "events", ["editorial_id"], :name => "index_events_on_editorial_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
