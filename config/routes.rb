@@ -1,4 +1,6 @@
 Eter::Application.routes.draw do
+  resources :badges
+
   resources :events
 
   resources :awards

@@ -1,0 +1,53 @@
+<%= form_for(@badge) do |f| %>
+  <% if @badge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@badge.errors.count, "error") %> prohibited this badge from being saved:</h2>
+
+      <ul>
+      <% @badge.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :point_min %><br />
+    <%= f.number_field :point_min %>
+  </div>
+  <div class="field">
+    <%= f.label :unique %><br />
+    <%= f.check_box :unique %>
+  </div>
+  <div class="field">
+    <%= f.label :shared %><br />
+    <%= f.check_box :shared %>
+  </div>
+  <div class="field">
+    <%= f.label :media %><br />
+    <%= f.text_field :media %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :award %><br />
+    <%= f.text_field :award %>
+  </div>
+  <div class="field">
+    <%= f.label :event %><br />
+    <%= f.text_field :event %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

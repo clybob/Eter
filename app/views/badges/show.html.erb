@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @badge.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @badge.description %>
+</p>
+
+<p>
+  <b>Point min:</b>
+  <%= @badge.point_min %>
+</p>
+
+<p>
+  <b>Unique:</b>
+  <%= @badge.unique %>
+</p>
+
+<p>
+  <b>Shared:</b>
+  <%= @badge.shared %>
+</p>
+
+<p>
+  <b>Media:</b>
+  <%= @badge.media %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @badge.url %>
+</p>
+
+<p>
+  <b>Award:</b>
+  <%= @badge.award %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @badge.event %>
+</p>
+
+
+<%= link_to 'Edit', edit_badge_path(@badge) %> |
+<%= link_to 'Back', badges_path %>

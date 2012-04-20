@@ -1,0 +1,39 @@
+<h1>Listing badges</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Point min</th>
+    <th>Unique</th>
+    <th>Shared</th>
+    <th>Media</th>
+    <th>Url</th>
+    <th>Award</th>
+    <th>Event</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @badges.each do |badge| %>
+  <tr>
+    <td><%= badge.name %></td>
+    <td><%= badge.description %></td>
+    <td><%= badge.point_min %></td>
+    <td><%= badge.unique %></td>
+    <td><%= badge.shared %></td>
+    <td><%= badge.media %></td>
+    <td><%= badge.url %></td>
+    <td><%= badge.award %></td>
+    <td><%= badge.event %></td>
+    <td><%= link_to 'Show', badge %></td>
+    <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
+    <td><%= link_to 'Destroy', badge, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Badge', new_badge_path %>

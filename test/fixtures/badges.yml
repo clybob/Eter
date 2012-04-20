@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  point_min: 1
+  unique: 
+  shared: 
+  media: MyString
+  url: MyString
+  award: 
+  event: 
+
+two:
+  name: MyString
+  description: MyString
+  point_min: 1
+  unique: 
+  shared: 
+  media: MyString
+  url: MyString
+  award: 
+  event: 
