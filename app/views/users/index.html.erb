@@ -1,5 +1,10 @@
 <h1>Listing users</h1>
-
+<%= form_tag request.path, :method => 'get' do %>
+    <% content_tag :label do %>
+        Search by Name:
+        <%= text_field_tag :search, params[:search]%>
+    <% end %>
+<% end %>
 <table>
   <tr>
     <th>Name</th>
@@ -23,7 +28,7 @@
   </tr>
 <% end %>
 </table>
-
+<%= will_paginate @users %>
 <br />
 
 <%= link_to 'New User', new_user_path %>
