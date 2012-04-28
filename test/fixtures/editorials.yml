@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  uri: MyString
+  uri: Editoria1
 
 two:
-  uri: MyString
+  uri: Editoria2

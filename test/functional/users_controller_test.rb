@@ -17,6 +17,7 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should create user" do
+    @user.email = 'juju@eter.com'
     assert_difference('User.count') do
       post :create, user: @user.attributes
     end
@@ -45,5 +46,13 @@ class UsersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to users_path
+  end
+
+  test "should get index and have table with eleven tr" do
+    get :index
+
+    assert_select 'table' do
+      assert_select 'tr', 11
+    end
   end
 end

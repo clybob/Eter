@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  name: Evento1
   points: 1
-  editorial: 
+  editorial_id: 980190962
 
 two:
-  name: MyString
+  name: Evento2
   points: 1
-  editorial: 
+  editorial_id: 298486374

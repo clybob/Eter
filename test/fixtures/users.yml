@@ -11,3 +11,57 @@ two:
   email: edvaldo@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
+
+three:
+  name: Andre
+  email: andre@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
+
+four:
+  name: Juan
+  email: juan@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
+
+five:
+  name: Kiko
+  email: kiko@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
+
+six:
+  name: Hugo
+  email: hugo@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
+
+seven:
+  name: Mariana
+  email: mariana@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
+
+eight:
+  name: Romulo
+  email: romulo@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
+
+nine:
+  name: Mario
+  email: mario@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
+
+ten:
+  name: João
+  email: joao@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
+
+eleven:
+  name: Demetrius
+  email: demetrius@eter.com
+  oauth_token: meu_token
+  oauth_token_secret: meu_token_secreto
