@@ -1,5 +1,5 @@
 class Point < ActiveRecord::Base
-  validates :user, :event, :badge, uniqueness: true
+  validates :user_name, :event, :badge, :points, presence: true
   
   belongs_to :user
   belongs_to :event
