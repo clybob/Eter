@@ -1,0 +1,26 @@
+<h1>Listing Points</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Points</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @points.each do |point| %>
+  <tr>
+    <td><%= point.user.name %></td>
+    <td><%= point.points %></td>
+    <td><%= link_to 'Show', point %></td>
+    <td><%= link_to 'Edit', point_user_path(user) %></td>
+    <td><%= link_to 'Destroy', point, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+
+<%= %>
+</table>
+
+<br />
+<%= link_to 'New User', new_point_path %>

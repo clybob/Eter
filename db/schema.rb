@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419235246) do
+ActiveRecord::Schema.define(:version => 20120428184536) do
 
   create_table "awards", :force => true do |t|
     t.string   "name"
@@ -53,6 +53,15 @@ ActiveRecord::Schema.define(:version => 20120419235246) do
   end
 
   add_index "events", ["editorial_id"], :name => "index_events_on_editorial_id"
+
+  create_table "points", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "points"
+    t.integer  "event_id"
+    t.integer  "badge_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "premios", :force => true do |t|
     t.string   "award"
