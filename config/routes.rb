@@ -8,8 +8,8 @@ Eter::Application.routes.draw do
   resources :editorials
 
   resources :users
-
-  resources :points
+  
+  resources :points, :only => [:index, :show, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
