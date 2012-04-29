@@ -9,13 +9,13 @@
     <th></th>
   </tr>
 
-<% @points.each do |ponto| %>
+<% @points.each do |point| %>
   <tr>
-    <td><%= ponto.user.name %></td>
-    <td><%= ponto.points %></td>
-    <td><%= ponto.badge.name %></td>
-    <td><%= link_to 'Show', ponto %></td>
-    <td><%= link_to 'Destroy', ponto, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= point.user.name %></td>
+    <td><%= point.points %></td>
+    <td><%= point.badge.name %></td>
+    <td><%= link_to 'Show', point %></td>
+    <td><%= link_to 'Destroy', point, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 

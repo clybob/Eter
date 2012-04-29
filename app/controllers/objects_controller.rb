@@ -27,8 +27,16 @@ class ObjectsController < ApplicationController
 
   # GET /objects
   # GET /objects.json
+
+  def field_for_search
+  end
+
   def index
-    @objects = get_class.all
+    @objects = get_class.paginate(:per_page => 10, :page => params[:page],
+                                  :conditions => ["#{field_for_search} like ?", params[:search] + "%"],
+                                  :order => "#{field_for_search} ASC") if params[:search]
+
+    @objects = get_class.paginate(:per_page => 10, :page => params[:page]) if params[:search] == nil
     set_variable_collection
     respond_with @objects
   end
