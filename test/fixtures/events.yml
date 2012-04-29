@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  id: 1
   name: Evento1
   points: 1
   editorial_id: 980190962
 
 two:
+  id: 2
   name: Evento2
   points: 1
   editorial_id: 298486374

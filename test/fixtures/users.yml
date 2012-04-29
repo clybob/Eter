@@ -1,66 +1,77 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  id: 1
   name: Zacarias
   email: zacarias@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 two:
+  id: 2
   name: Edvaldo
   email: edvaldo@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 three:
+  id: 3
   name: Andre
   email: andre@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 four:
+  id: 4
   name: Juan
   email: juan@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 five:
+  id: 5
   name: Kiko
   email: kiko@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 six:
+  id: 6
   name: Hugo
   email: hugo@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 seven:
+  id: 7
   name: Mariana
   email: mariana@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 eight:
+  id: 8
   name: Romulo
   email: romulo@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 nine:
+  id: 9
   name: Mario
   email: mario@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 ten:
+  id: 10
   name: João
   email: joao@eter.com
   oauth_token: meu_token
   oauth_token_secret: meu_token_secreto
 
 eleven:
+  id: 11
   name: Demetrius
   email: demetrius@eter.com
   oauth_token: meu_token

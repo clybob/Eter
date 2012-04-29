@@ -1,23 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  description: MyString
+  id: 1
+  name: Major
+  description: Major user
   point_min: 1
-  unique: 
-  shared: 
+  unique:
+  shared:
   media: MyString
-  url: MyString
-  award: 
-  event: 
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
 
 two:
-  name: MyString
-  description: MyString
+  id: 2
+  name: User Pro
+  description: Pro
   point_min: 1
-  unique: 
-  shared: 
+  unique:
+  shared:
   media: MyString
-  url: MyString
-  award: 
-  event: 
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
