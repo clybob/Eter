@@ -7,6 +7,7 @@ class CreateEvents < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :events, :name
     add_index :events, :editorial_id
   end
 end

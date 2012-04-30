@@ -7,5 +7,7 @@ class CreatePoints < ActiveRecord::Migration
       t.references :badge
       t.timestamps
     end
+    add_index :points, :user_id
+    add_index :points, :event_id
   end
 end

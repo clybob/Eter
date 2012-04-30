@@ -13,6 +13,7 @@ class CreateBadges < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :badges,  :name
     add_index :badges, :award_id
     add_index :badges, :event_id
   end
