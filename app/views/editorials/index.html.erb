@@ -1,23 +1,25 @@
 <h1>Listing editorials</h1>
 
-<table>
+<table class="table table-striped">
+  <thead>
   <tr>
     <th>Uri</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+  </thead>
+<tbody>
 <% @editorials.each do |editorial| %>
   <tr>
     <td><%= editorial.uri %></td>
-    <td><%= link_to 'Show', editorial %></td>
-    <td><%= link_to 'Edit', edit_editorial_path(editorial) %></td>
-    <td><%= link_to 'Destroy', editorial, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', editorial, :class => 'btn btn-mini'%></td>
+    <td><%= link_to 'Edit', edit_editorial_path(editorial) , :class => 'btn btn-mini'%></td>
+    <td><%= link_to 'Destroy', editorial, confirm: 'Are you sure?', method: :delete , :class => 'btn btn-mini btn-danger'%></td>
   </tr>
 <% end %>
 </table>
-
+</tbody>
 <br />
 
 <%= link_to 'New Editorial', new_editorial_path %>

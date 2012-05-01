@@ -1,6 +1,7 @@
 <h1>Listing events</h1>
 
-<table>
+<table class="table table-striped">
+  <thead>
   <tr>
     <th>Name</th>
     <th>Points</th>
@@ -9,17 +10,19 @@
     <th></th>
     <th></th>
   </tr>
-
+  </thead>
+  <tbody>
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
     <td><%= event.points %></td>
     <td><%= event.editorial.uri %><%="(#{event.editorial.id})"%></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', event, :class=>'btn btn-mini'%></td>
+    <td><%= link_to 'Edit', edit_event_path(event) , :class=>'btn btn-mini'%></td>
+    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete, :class=>'btn btn-mini btn-danger' %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />

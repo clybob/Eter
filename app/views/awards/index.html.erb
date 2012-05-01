@@ -1,6 +1,7 @@
 <h1>Listing awards</h1>
 
-<table>
+<table class="table table-striped">
+  <thead>
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -9,17 +10,19 @@
     <th></th>
     <th></th>
   </tr>
-
+  </thead>
+<tbody>
 <% @awards.each do |award| %>
   <tr>
     <td><%= award.name %></td>
     <td><%= award.description %></td>
     <td><%= award.url %></td>
-    <td><%= link_to 'Show', award %></td>
-    <td><%= link_to 'Edit', edit_award_path(award) %></td>
-    <td><%= link_to 'Destroy', award, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', award, :class => 'btn btn-mini'%></td>
+    <td><%= link_to 'Edit', edit_award_path(award) , :class => 'btn btn-mini'%></td>
+    <td><%= link_to 'Destroy', award, confirm: 'Are you sure?', method: :delete , :class => 'btn btn-mini btn-danger'%></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />

@@ -1,6 +1,7 @@
 <h1>Listing Points</h1>
 
-<table>
+<table class="table table-striped">
+  <thead>
   <tr>
     <th>Name</th>
     <th>Points</th>
@@ -8,15 +9,16 @@
     <th>Badge</th>
     <th></th>
   </tr>
-
+  </thead>
+  <tbody>
 <% @points.each do |point| %>
   <tr>
     <td><%= point.user.name %></td>
     <td><%= point.points %></td>
     <td><%= point.badge.name %></td>
-    <td><%= link_to 'Show', point %></td>
-    <td><%= link_to 'Destroy', point, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', point, :class=>'btn btn-mini' %></td>
+    <td><%= link_to 'Destroy', point, confirm: 'Are you sure?', method: :delete, :class=>'btn btn-mini btn-danger' %></td>
   </tr>
 <% end %>
-
+  </tbody>
 </table>

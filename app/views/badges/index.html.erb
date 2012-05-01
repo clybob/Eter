@@ -1,6 +1,7 @@
 <h1>Listing badges</h1>
 
-<table>
+<table class="table table-striped">
+  <thead>
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -15,7 +16,9 @@
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
+<tbody>
 <% @badges.each do |badge| %>
   <tr>
     <td><%= badge.name %></td>
@@ -27,11 +30,12 @@
     <td><%= badge.url %></td>
     <td><%= badge.award.name %></td>
     <td><%= badge.event.name %></td>
-    <td><%= link_to 'Show', badge %></td>
-    <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
-    <td><%= link_to 'Destroy', badge, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', badge, :class => 'btn btn-mini' %></td>
+    <td><%= link_to 'Edit', edit_badge_path(badge), :class => 'btn btn-mini' %></td>
+    <td><%= link_to 'Destroy', badge, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini' %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
