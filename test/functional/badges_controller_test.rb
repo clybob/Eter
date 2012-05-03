@@ -10,6 +10,7 @@ class BadgesControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_not_nil assigns(:badges)
+    assert_index_tags 2, 12
   end
 
   test "should get new" do
