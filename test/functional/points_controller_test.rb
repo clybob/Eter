@@ -9,6 +9,7 @@ class PointsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:points)
+    assert_index_tags 2, 5
   end
   
   test "should show point" do
