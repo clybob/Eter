@@ -10,8 +10,9 @@
     <th></th>
   </tr>
   </thead>
+
   <tbody>
-<% @points.each do |point| %>
+  <% @points.each do |point| %>
   <tr>
     <td><%= point.user.name %></td>
     <td><%= point.points %></td>
@@ -19,6 +20,6 @@
     <td><%= link_to 'Show', point, :class=>'btn btn-mini' %></td>
     <td><%= link_to 'Destroy', point, confirm: 'Are you sure?', method: :delete, :class=>'btn btn-mini btn-danger' %></td>
   </tr>
-<% end %>
+  <% end %>
   </tbody>
 </table>

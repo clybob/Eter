@@ -11,8 +11,9 @@
     <th></th>
   </tr>
   </thead>
-<tbody>
-<% @awards.each do |award| %>
+
+  <tbody>
+  <% @awards.each do |award| %>
   <tr>
     <td><%= award.name %></td>
     <td><%= award.description %></td>
@@ -21,10 +22,8 @@
     <td><%= link_to 'Edit', edit_award_path(award) , :class => 'btn btn-mini'%></td>
     <td><%= link_to 'Destroy', award, confirm: 'Are you sure?', method: :delete , :class => 'btn btn-mini btn-danger'%></td>
   </tr>
-<% end %>
-</tbody>
+  <% end %>
+  </tbody>
 </table>
-
-<br />
 
 <%= link_to 'New Award', new_award_path %>

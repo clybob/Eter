@@ -18,8 +18,8 @@
   </tr>
   </thead>
 
-<tbody>
-<% @badges.each do |badge| %>
+  <tbody>
+  <% @badges.each do |badge| %>
   <tr>
     <td><%= badge.name %></td>
     <td><%= badge.description %></td>
@@ -34,10 +34,8 @@
     <td><%= link_to 'Edit', edit_badge_path(badge), :class => 'btn btn-mini' %></td>
     <td><%= link_to 'Destroy', badge, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini' %></td>
   </tr>
-<% end %>
-</tbody>
+  <% end %>
+  </tbody>
 </table>
-
-<br />
 
 <%= link_to 'New Badge', new_badge_path %>

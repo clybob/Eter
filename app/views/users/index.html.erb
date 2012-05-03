@@ -11,8 +11,9 @@
     <th></th>
   </tr>
   </thead>
-<tbody>
-<% @users.each do |user| %>
+
+  <tbody>
+  <% @users.each do |user| %>
   <tr>
     <td><%= user.name %></td>
     <td><%= user.email %></td>
@@ -22,10 +23,9 @@
     <td><%= link_to 'Edit', edit_user_path(user), :class=>'btn btn-mini' %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete, :class=>'btn btn-mini btn-danger' %></td>
   </tr>
-<% end %>
-</tbody>
+  <% end %>
+  </tbody>
 </table>
 <%= will_paginate @users %>
-<br />
 
 <%= link_to 'New User', new_user_path %>
