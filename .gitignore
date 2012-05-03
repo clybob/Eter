@@ -14,5 +14,6 @@
 /log/*.log
 /tmp
 *.lock
-/db/schema.rb
 /coverage
+db/schema.rb
+public/assets/
