@@ -17,7 +17,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-
+  gem 'bootstrap-sass', '~> 2.0.2'
   gem 'uglifier', '>= 1.0.3'
 end
 
