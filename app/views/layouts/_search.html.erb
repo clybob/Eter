@@ -1,9 +1,0 @@
-<% parameters_request = request.params %>
-<% if parameters_request["action"] == "index" %>
-  <%= form_tag request.path, :method => 'get' do %>
-    <% content_tag :label do %>
-      Search :
-      <%= text_field_tag :search, params[:search]%>
-    <% end %>
-  <% end %>
-<%end%>

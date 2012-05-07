@@ -1,5 +1,10 @@
 <h1>Listing badges</h1>
-
+<%= form_tag request.path, :method => 'get' do %>
+  <% content_tag :label do %>
+    Search :
+    <%= text_field_tag :search, params[:search]%>
+  <% end %>
+<% end %>
 <table class="table table-striped">
   <thead>
   <tr>
@@ -32,7 +37,7 @@
     <td><%= badge.event.name %></td>
     <td><%= link_to 'Show', badge, :class => 'btn btn-mini' %></td>
     <td><%= link_to 'Edit', edit_badge_path(badge), :class => 'btn btn-mini' %></td>
-    <td><%= link_to 'Destroy', badge, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini' %></td>
+    <td><%= link_to 'Destroy', badge, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-mini btn-danger' %></td>
   </tr>
   <% end %>
   </tbody>
