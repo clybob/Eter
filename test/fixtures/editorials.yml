@@ -1,7 +1,45 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  id: 1
   uri: Editoria1
 
 two:
+  id: 2
   uri: Editoria2
+
+three:
+  id: 3
+  uri: Editoria3
+
+four:
+  id: 4
+  uri: Editoria4
+
+five:
+  id: 5
+  uri: Editoria5
+
+six:
+  id: 6
+  uri: Editoria6
+
+seven:
+  id: 7
+  uri: Editoria7
+
+eight:
+  id: 8
+  uri: Editoria8
+
+nine:
+  id: 9
+  uri: Editoria9
+
+ten:
+  id: 10
+  uri: Editoria10
+
+eleven:
+  id: 11
+  uri: Editoria11

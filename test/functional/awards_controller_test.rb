@@ -9,7 +9,8 @@ class AwardsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:awards)
-    assert_index_tags 2, 6
+    assert_index_tags 10, 6
+    assert_paginate_is_displayed
   end
 
   test "should get new" do

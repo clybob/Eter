@@ -17,3 +17,66 @@ two:
   points: 100
   event_id: 1
   badge_id: 1
+
+three:
+  id: 3
+  user_id: 3
+  points: 10
+  event_id: 1
+  badge_id: 1
+
+four:
+  id: 4
+  user_id: 4
+  points: 100
+  event_id: 1
+  badge_id: 1
+
+five:
+  id: 5
+  user_id: 5
+  points: 100
+  event_id: 1
+  badge_id: 1
+
+six:
+  id: 6
+  user_id: 6
+  points: 1000
+  event_id: 1
+  badge_id: 1
+
+seven:
+  id: 7
+  user_id: 7
+  points: 50
+  event_id: 1
+  badge_id: 1
+
+eight:
+  id: 8
+  user_id: 8
+  points: 500
+  event_id: 1
+  badge_id: 1
+
+nine:
+  id: 9
+  user_id: 9
+  points: 1000
+  event_id: 1
+  badge_id: 1
+
+ten:
+  id: 10
+  user_id: 10
+  points: 700
+  event_id: 1
+  badge_id: 1
+
+eleven:
+  id: 11
+  user_id: 11
+  points: 1000
+  event_id: 1
+  badge_id: 1

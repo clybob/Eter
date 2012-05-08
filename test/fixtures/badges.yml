@@ -16,7 +16,115 @@ two:
   id: 2
   name: User Pro
   description: Pro
-  point_min: 1
+  point_min: 2
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+three:
+  id: 3
+  name: Super User
+  description: Super User
+  point_min: 3
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+four:
+  id: 4
+  name: Super Hiper User
+  description: Super Hiper User
+  point_min: 4
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+five:
+  id: 5
+  name: Super Mega User
+  description: Super Mega User
+  point_min: 5
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+six:
+  id: 6
+  name: Hero
+  description: Hero
+  point_min: 6
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+seven:
+  id: 7
+  name: Super Hero
+  description: Super Hero
+  point_min: 7
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+eight:
+  id: 8
+  name: Mega Hero
+  description: Mega Hero
+  point_min: 8
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+nine:
+  id: 9
+  name: President of Country
+  description: President of Country
+  point_min: 9
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+ten:
+  id: 10
+  name: Super President
+  description: Super President
+  point_min: 10
+  unique:
+  shared:
+  media: MyString
+  url: http://eter.com
+  award_id: 1
+  event_id: 1
+
+eleven:
+  id: 11
+  name: God
+  description: God
+  point_min: 11
   unique:
   shared:
   media: MyString

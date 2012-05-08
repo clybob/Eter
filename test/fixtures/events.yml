@@ -4,10 +4,64 @@ one:
   id: 1
   name: Evento1
   points: 1
-  editorial_id: 980190962
+  editorial_id: 1
 
 two:
   id: 2
   name: Evento2
   points: 1
-  editorial_id: 298486374
+  editorial_id: 2
+
+three:
+  id: 3
+  name: Evento3
+  points: 3
+  editorial_id: 3
+
+four:
+  id: 4
+  name: Evento4
+  points: 4
+  editorial_id: 4
+
+five:
+  id: 5
+  name: Evento5
+  points: 5
+  editorial_id: 5
+
+six:
+  id: 6
+  name: Evento6
+  points: 6
+  editorial_id: 6
+
+seven:
+  id: 7
+  name: Evento7
+  points: 7
+  editorial_id: 7
+
+eight:
+  id: 8
+  name: Evento8
+  points: 8
+  editorial_id: 8
+
+nine:
+  id: 9
+  name: Evento9
+  points: 9
+  editorial_id: 9
+
+ten:
+  id: 10
+  name: Evento10
+  points: 10
+  editorial_id: 10
+
+eleven:
+  id: 11
+  name: Evento11
+  points: 11
+  editorial_id: 11
