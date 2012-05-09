@@ -49,6 +49,13 @@ class UsersControllerTest < ActionController::TestCase
     get :edit, id: @user
     assert_response :success
   end
+  
+  test "should edit name of user" do
+    @user.name = "Testando"
+    @user.save!
+    assert_equal(@user.name, "Testando")
+  end
+  
 
   test "should update user" do
     put :update, id: @user, user: @user.attributes
