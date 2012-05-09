@@ -36,6 +36,8 @@ class EditorialsControllerTest < ActionController::TestCase
 
   test "should show editorial" do
     get :show, id: @editorial
+    assert_show_tag_p(2)
+    assert_select ".span12", /#{@editorial.uri}/
     assert_response :success
   end
 

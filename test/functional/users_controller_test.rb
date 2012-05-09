@@ -37,6 +37,11 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should show user" do
     get :show, id: @user
+    assert_show_tag_p(5)
+    assert_select ".span12", /#{@user.name}/
+    assert_select ".span12", /#{@user.email}/
+    assert_select ".span12", /#{@user.oauth_token}/
+    assert_select ".span12", /#{@user.oauth_token_secret}/
     assert_response :success
   end
 

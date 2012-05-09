@@ -36,6 +36,10 @@ class AwardsControllerTest < ActionController::TestCase
 
   test "should show award" do
     get :show, id: @award
+    assert_show_tag_p(4)
+    assert_select ".span12", /#{@award.name}/
+    assert_select ".span12", /#{@award.description}/
+    assert_select ".span12", /#{@award.url}/
     assert_response :success
   end
 

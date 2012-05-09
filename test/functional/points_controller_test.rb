@@ -23,6 +23,10 @@ class PointsControllerTest < ActionController::TestCase
   
   test "should show point" do
     get :show, id: @point
+    assert_show_tag_p(4)
+    assert_select ".span12", /#{@point.user.name}/
+    assert_select ".span12", /#{@point.points}/
+    assert_select ".span12", /#{@point.badge.name}/
     assert_response :success
   end
 
