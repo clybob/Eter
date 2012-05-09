@@ -13,6 +13,14 @@ class UsersControllerTest < ActionController::TestCase
     assert_paginate_is_displayed
   end
 
+  test "should get index paginated" do
+    get( :index, { 'page' => '2' }  )
+    assert_response :success
+    assert_not_nil assigns(:users)
+    assert_index_tags 1, 7
+    assert_paginate_is_displayed
+  end
+
   test "should get new" do
     get :new
     assert_response :success

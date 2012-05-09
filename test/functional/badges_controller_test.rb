@@ -14,6 +14,14 @@ class BadgesControllerTest < ActionController::TestCase
     assert_paginate_is_displayed
   end
 
+  test "should get index paginated" do
+    get( :index, { 'page' => '2' }  )
+    assert_response :success
+    assert_not_nil assigns(:badges)
+    assert_index_tags 1, 12
+    assert_paginate_is_displayed
+  end
+
   test "should get new" do
     get :new
     assert_response :success
