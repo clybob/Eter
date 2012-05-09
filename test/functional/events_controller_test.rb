@@ -36,8 +36,6 @@ class EventsControllerTest < ActionController::TestCase
 
   test "should show event" do
     get :show, id: @event
-    assert_show_tag_p(4)
-    assert_select ".span12", /#{@event.name}/
     assert_response :success
   end
 

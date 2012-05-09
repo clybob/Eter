@@ -22,14 +22,6 @@ class ActiveSupport::TestCase
                  }
                }
   end
-  
-  def assert_show_tag_p(p_count)
-    assert_tag  :tag => 'div',
-                  :tag => 'div',
-                    :tag => 'div',
-                      :tag => 'div', :attributes => {:class => 'span12'},
-                        :children => {:count => p_count, :only => {:tag => 'p'}}
-  end
 
   def assert_paginate_is_displayed
     assert_tag :tag => 'div', :attributes => {:class => 'pagination'}
