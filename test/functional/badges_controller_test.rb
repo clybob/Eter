@@ -37,6 +37,8 @@ class BadgesControllerTest < ActionController::TestCase
 
   test "should show badge" do
     get :show, id: @badge
+    assert_show_tag_p(10)
+    assert_select ".span12", /#{@badge.name}/
     assert_response :success
   end
 
