@@ -48,6 +48,18 @@ class EventsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should edit name of event" do
+    @event.name = "Evento"
+    @event.save!
+    assert_equal(@event.name, "Evento")
+  end
+
+  test "should edit with invalid data" do
+    @event.name = ""
+    @event.points = "S"
+    assert_equal @event.save, false
+  end
+
   test "should update event" do
     put :update, id: @event, event: @event.attributes
     assert_redirected_to event_path(assigns(:event))

@@ -55,6 +55,21 @@ class BadgesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should edit name of badge" do
+    @badge.name = "Badge11"
+    @badge.save!
+    assert_equal(@badge.name, "Badge11")
+  end
+
+  test "should edit with invalid data" do
+    @badge.name = ""
+    @badge.description = ""
+    @badge.media = ""
+    @badge.url = ""
+    @badge.award.id = ""
+    assert_equal @badge.save, false
+  end
+
   test "should update badge" do
     put :update, id: @badge, badge: @badge.attributes
     assert_redirected_to badge_path(assigns(:badge))

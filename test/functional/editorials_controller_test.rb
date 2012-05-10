@@ -46,6 +46,17 @@ class EditorialsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should edit uri of editorial" do
+    @editorial.uri = "URI1"
+    @editorial.save!
+    assert_equal(@editorial.uri, "URI1")
+  end
+
+  test "should edit with invalid data" do
+    @editorial.uri = ""
+    assert_equal @editorial.save, false
+  end
+
   test "should update editorial" do
     put :update, id: @editorial, editorial: @editorial.attributes
     assert_redirected_to editorial_path(assigns(:editorial))

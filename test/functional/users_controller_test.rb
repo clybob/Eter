@@ -55,7 +55,12 @@ class UsersControllerTest < ActionController::TestCase
     @user.save!
     assert_equal(@user.name, "Testando")
   end
-  
+
+  test "should edit with invalid data" do
+    @user.name = ""
+    @user.email = ""
+    assert_equal @user.save, false
+  end
 
   test "should update user" do
     put :update, id: @user, user: @user.attributes

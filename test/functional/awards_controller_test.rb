@@ -48,6 +48,17 @@ class AwardsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should edit name of award" do
+    @award.name = "Award1"
+    @award.save!
+    assert_equal(@award.name, "Award1")
+  end
+
+  test "should with invalid data" do
+    @award.name = ""
+    assert_equal @award.save, false
+  end
+
   test "should update award" do
     put :update, id: @award, award: @award.attributes
     assert_redirected_to award_path(assigns(:award))
