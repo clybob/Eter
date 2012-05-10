@@ -22,7 +22,7 @@
   <tr>
     <td><%= event.name %></td>
     <td><%= event.points %></td>
-    <td><%= event.editorial.uri %><%="(#{event.editorial.id})"%></td>
+    <td><%= event.editorial.uri %></td>
     <td><%= link_to 'Show', event, :class=>'btn btn-mini'%></td>
     <td><%= link_to 'Edit', edit_event_path(event) , :class=>'btn btn-mini'%></td>
     <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete, :class=>'btn btn-mini btn-danger' %></td>
