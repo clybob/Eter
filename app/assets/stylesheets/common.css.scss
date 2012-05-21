@@ -1,4 +1,6 @@
 .pagination {
+    float: left;
+
     span.previous_page, span.next_page, em.current {
         display: block;
         float: left;
@@ -29,4 +31,9 @@
 
 a.btn.btn-danger {
     color: #FFF;
+}
+
+a.btn-lista-adicionar {
+    float: right;
+    margin: 25px 0;
 }
