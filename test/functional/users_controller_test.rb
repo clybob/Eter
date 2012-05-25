@@ -66,6 +66,13 @@ class UsersControllerTest < ActionController::TestCase
     put :update, id: @user, user: @user.attributes
     assert_redirected_to user_path(assigns(:user))
   end
+  
+  test "should not update user with invalid attributes" do
+    @user.name = nil
+    put :update, id: @user, user: @user.attributes
+    assert_response :success
+    assert_template :edit
+  end
 
   test "should destroy user" do
     assert_difference('User.count', -1) do
