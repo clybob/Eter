@@ -35,6 +35,11 @@ class BadgesControllerTest < ActionController::TestCase
     assert_redirected_to badge_path(assigns(:badge))
   end
 
+  test "should not create badge with invalid data" do
+    @new_badge = Badge.new(name: "", description: "", media: "", url: "", award_id: "")
+    assert_equal @new_badge.save, false
+  end
+
   test "should show badge" do
     get :show, id: @badge
     assert_show_tag_p(10)

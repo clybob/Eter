@@ -34,6 +34,12 @@ class AwardsControllerTest < ActionController::TestCase
     assert_redirected_to award_path(assigns(:award))
   end
 
+  test "should not create award with invalid data" do
+    @new_award = Award.new(name: "")
+    assert_equal @new_award.save, false
+  end
+
+
   test "should show award" do
     get :show, id: @award
     assert_show_tag_p(4)

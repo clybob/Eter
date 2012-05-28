@@ -34,6 +34,11 @@ class EditorialsControllerTest < ActionController::TestCase
     assert_redirected_to editorial_path(assigns(:editorial))
   end
 
+  test "should not create editorial with invalid data" do
+    @new_editorial = Editorial.new(uri: "")
+    assert_equal @new_editorial.save, false
+  end
+
   test "should show editorial" do
     get :show, id: @editorial
     assert_show_tag_p(2)

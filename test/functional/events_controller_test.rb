@@ -34,6 +34,11 @@ class EventsControllerTest < ActionController::TestCase
     assert_redirected_to event_path(assigns(:event))
   end
 
+  test "should not create event with invalid data" do
+    @new_event = Event.new(name: "", editorial_id: 1, points: "A")
+    assert_equal @new_event.save, false
+  end
+
   test "should show event" do
     get :show, id: @event
     assert_show_tag_p(4)

@@ -31,8 +31,12 @@ class UsersControllerTest < ActionController::TestCase
     assert_difference('User.count') do
       post :create, user: @user.attributes
     end
-
     assert_redirected_to user_path(assigns(:user))
+  end
+
+  test "should not create user with invalid data" do
+    @new_user = User.new(name: "", email: "")
+    assert_equal @new_user.save, false
   end
 
   test "should show user" do
